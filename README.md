@@ -34,5 +34,7 @@ body :
 
 
 Note :You can put the recievers mail id in alertcontroller file
+      I have used data for api fetching directly . i did not get any dummy api.
+      If i would do with dummy api ,i would havbe used fetch method and converted the data in json and used it .
 
 
