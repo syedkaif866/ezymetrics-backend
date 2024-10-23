@@ -32,3 +32,7 @@ body :
   "leads": 3 
 }
 
+
+Note :You can put the recievers mail id in alertcontroller file
+
+
