@@ -16,13 +16,13 @@ Request Type: GET
 URL: http://localhost:5000/api/metrics
 
 
- GET /api/reports/csv (assuming you've set this up)
+ GET /api/reports/csv 
 Description: Generate a CSV report of leads.
 Request Type: GET
 URL: http://localhost:5000/api/reports/csv
 
 
-POST /api/alerts (assuming you set this up)
+POST /api/alerts 
 Description: Send an alert email.
 Request Type: POST
 URL: http://localhost:5000/api/alerts
