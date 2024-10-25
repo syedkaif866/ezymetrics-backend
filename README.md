@@ -1,40 +1,39 @@
 # ezymetrics-backend
- 
-GET /api/leads
-Description: Fetch and store dummy lead data.
-Request Type: GET
-URL: http://localhost:5000/api/leads
 
-GET /api/campaigns
-Description: Fetch and store dummy campaign data.
+url of json data : https://jsonplaceholder.typicode.com/users
+                   https://jsonplaceholder.typicode.com/users/:id
+
+GET /api/fetch-leads
+Description: Fetch and store lead data from json.
 Request Type: GET
-URL: http://localhost:5000/api/campaigns
+URL: http://localhost:5000/api/fetch-leads
+
+GET /api/fetch-leads/:id
+Description: Fetch and store lead data from json.
+Request Type: GET
+URL: http://localhost:5000/api/fetch-leads/:id
 
 GET /api/metrics
-Description: Fetch performance metrics of campaigns.
+Description: Fetch  metrics of leads.
 Request Type: GET
 URL: http://localhost:5000/api/metrics
 
 
- GET /api/reports/csv 
+ GET /api/generate-report
 Description: Generate a CSV report of leads.
 Request Type: GET
-URL: http://localhost:5000/api/reports/csv
+URL: http://localhost:5000/api/generate-report
 
 
-POST /api/alerts 
+POST /api/send-alert
 Description: Send an alert email.
 Request Type: POST
-URL: http://localhost:5000/api/alerts
+URL: http://localhost:5000/api/send-alert
 body :
 {
-  "campaign": "Some Campaign",
-  "leads": 3 
+  "email" :" "
 }
 
 
-Note :You can put the recievers mail id in alertcontroller file
-      I have used data for api fetching directly . i did not get any dummy api.
-      If i would do with dummy api ,i would havbe used fetch method and converted the data in json and used it .
 
 
