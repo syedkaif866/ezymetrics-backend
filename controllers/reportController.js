@@ -4,7 +4,7 @@ const Lead = require('../models/Lead');
 exports.generateCsvReport = async (req, res) => {
   try {
     const leads = await Lead.find();
-    const fields = ['name', 'email', 'phone', 'campaign', 'status'];
+    const fields = ['id', 'name', 'email', 'phone', 'companyName', 'status'];
     const json2csvParser = new Parser({ fields });
     const csv = json2csvParser.parse(leads);
 

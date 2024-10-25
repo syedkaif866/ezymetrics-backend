@@ -2,24 +2,23 @@ const nodemailer = require('nodemailer');
 
 exports.sendAlert = async (req, res) => {
   try {
-    // Create email transporter
-    let transporter = nodemailer.createTransport({
+    const email = req.body.email;
+
+    const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: process.env.EMAIL, // your email
-        pass: process.env.PASSWORD // your email password
-      }
+        user: process.env.EMAIL,
+        pass: process.env.PASSWORD,
+      },
     });
 
-    // Define email content
-    let mailOptions = {
+    const mailOptions = {
       from: process.env.EMAIL,
-      to: 'syedkaif.21is@saividya.ac.in',
-      subject: 'Campaign Alert',
-      text: 'One of your campaigns has less than 5 leads.'
+      to: email,
+      subject: 'Lead Alert',
+      text: 'One of your leads has been updated.',
     };
 
-    // Send email
     await transporter.sendMail(mailOptions);
     res.status(200).json({ message: 'Alert email sent!' });
   } catch (err) {
